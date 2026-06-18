@@ -2,14 +2,30 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
-const categories = ["All", "Web", "Mobile", "SaaS", "Games", "UI/UX"];
+const categories = ["All", "Web", "Game Dev", "SaaS", "Systems"];
 
 const projects = [
   {
     id: 1,
+    title: "LanternGolem Migration",
+    category: "Game Dev",
+    image: "https://picsum.photos/seed/golem/800/1000",
+    tags: ["Minecraft Mods", "System Migration", "Optimization"],
+    desc: "Migrating complex game systems to stable foundations while preserving original mechanics."
+  },
+  {
+    id: 2,
+    title: "Wang Fei Voice System",
+    category: "Systems",
+    image: "https://picsum.photos/seed/voice/800/600",
+    tags: ["Voice AI", "Backend Migration", "Real-time"],
+    desc: "Seamless voice integration for game environments, moving from V1 to V2 infrastructure."
+  },
+  {
+    id: 3,
     title: "EcoSphere Dashboard",
     category: "SaaS",
     image: "https://picsum.photos/seed/port1/800/1000",
@@ -17,15 +33,7 @@ const projects = [
     desc: "Real-time environmental monitoring platform for global enterprises."
   },
   {
-    id: 2,
-    title: "Vanguard Mobile",
-    category: "Mobile",
-    image: "https://picsum.photos/seed/port2/800/600",
-    tags: ["Flutter", "GraphQL"],
-    desc: "A secure, lightning-fast banking experience for the modern nomad."
-  },
-  {
-    id: 3,
+    id: 4,
     title: "Nebula OS",
     category: "Web",
     image: "https://picsum.photos/seed/port3/800/600",
@@ -33,20 +41,12 @@ const projects = [
     desc: "Immersive 3D operating system for browser-based collaboration."
   },
   {
-    id: 4,
+    id: 5,
     title: "Pixel Quest",
-    category: "Games",
+    category: "Game Dev",
     image: "https://picsum.photos/seed/port4/800/1000",
     tags: ["Unity", "WebGL"],
     desc: "Massively multiplayer online adventure game built for the open web."
-  },
-  {
-    id: 5,
-    title: "Synth UI Kit",
-    category: "UI/UX",
-    image: "https://picsum.photos/seed/port5/800/600",
-    tags: ["Figma", "Design Systems"],
-    desc: "The ultimate component library for high-performance SaaS products."
   },
   {
     id: 6,
@@ -78,7 +78,7 @@ export default function PortfolioPage() {
               Selected <br /> Works
             </motion.h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Discover how we've helped startups and enterprises build world-class digital experiences across various industries.
+              Discover how we've helped startups and game developers build world-class digital experiences and stable system architectures.
             </p>
           </div>
           
