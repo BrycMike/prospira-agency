@@ -15,8 +15,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-[#FDF6E3] border border-border rounded-[3rem] p-12 shadow-2xl">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
-              <StatCounter value={50} label="Projects Delivered" suffix="+" />
-              <StatCounter value={5} label="Years Experience" suffix="+" />
+              <StatCounter value={300} label="Projects Delivered" suffix="+" />
+              <StatCounter value={10} label="Years Experience" suffix="+" />
               <StatCounter value={20} label="Technologies" suffix="+" />
               <StatCounter value={100} label="Client Focused" suffix="%" />
             </div>
