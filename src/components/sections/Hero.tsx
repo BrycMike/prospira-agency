@@ -98,7 +98,6 @@ export default function Hero() {
                       data-ai-hint={heroImageData.imageHint}
                     />
                   )}
-                  {/* Floating elements */}
                   <motion.div 
                     animate={{ y: [-10, 10, -10] }} 
                     transition={{ duration: 4, repeat: Infinity }} 

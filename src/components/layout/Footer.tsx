@@ -1,15 +1,9 @@
+
 import React from "react";
 import Link from "next/link";
-import { Twitter, Linkedin, Github, Instagram, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Footer() {
-  const socialLinks = [
-    { Icon: Twitter, href: "#" },
-    { Icon: Linkedin, href: "#" },
-    { Icon: Github, href: "https://github.com/BrycMike" },
-    { Icon: Instagram, href: "#" }
-  ];
-
   return (
     <footer className="bg-[#233038] text-white py-20 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
