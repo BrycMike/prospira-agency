@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -16,6 +17,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -27,16 +29,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isHome = pathname === "/";
+  const shouldShowGlass = isScrolled || !isHome;
+
   return (
     <nav
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 py-4",
-        isScrolled ? "glass py-3" : "bg-transparent"
+        shouldShowGlass ? "glass py-3" : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="font-headline font-black text-2xl tracking-tighter flex items-center">
-          <span className={cn(isScrolled ? "text-foreground" : "text-white")}>PROSPIRA</span>
+          <span className={cn(shouldShowGlass ? "text-foreground" : "text-white")}>PROSPIRA</span>
         </Link>
 
         {/* Desktop Links */}
@@ -47,7 +52,7 @@ export default function Navbar() {
               href={link.href}
               className={cn(
                 "font-medium text-sm transition-colors hover:text-primary",
-                isScrolled ? "text-foreground" : "text-white/80"
+                shouldShowGlass ? "text-foreground" : "text-white/80"
               )}
             >
               {link.name}
@@ -57,7 +62,7 @@ export default function Navbar() {
             href="/contact"
             className={cn(
               "px-6 py-2 rounded-full font-bold text-sm transition-all",
-              isScrolled 
+              shouldShowGlass 
                 ? "bg-primary text-white hover:bg-primary/90" 
                 : "bg-white text-secondary hover:bg-accent"
             )}
@@ -68,7 +73,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className={cn("md:hidden p-2", isScrolled ? "text-foreground" : "text-white")}
+          className={cn("md:hidden p-2", shouldShowGlass ? "text-foreground" : "text-white")}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
