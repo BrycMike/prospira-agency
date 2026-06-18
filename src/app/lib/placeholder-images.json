@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-abstract",
+      "description": "Abstract 3D digital ecosystem",
+      "imageUrl": "https://picsum.photos/seed/prospira-hero/1200/800",
+      "imageHint": "abstract 3d ecosystem"
+    },
+    {
+      "id": "portfolio-1",
+      "description": "SaaS Dashboard UI",
+      "imageUrl": "https://picsum.photos/seed/dashboard/800/600",
+      "imageHint": "saas dashboard"
+    },
+    {
+      "id": "portfolio-2",
+      "description": "Mobile App Interface",
+      "imageUrl": "https://picsum.photos/seed/mobile/800/600",
+      "imageHint": "mobile app interface"
+    },
+    {
+      "id": "portfolio-3",
+      "description": "E-commerce Web Platform",
+      "imageUrl": "https://picsum.photos/seed/ecommerce/800/600",
+      "imageHint": "ecommerce website"
+    },
+    {
+      "id": "about-team",
+      "description": "Prospira collaborative workspace",
+      "imageUrl": "https://picsum.photos/seed/team/1200/600",
+      "imageHint": "agency team"
+    }
+  ]
+}
