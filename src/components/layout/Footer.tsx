@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="bg-[#233038] text-white py-20 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
@@ -32,7 +34,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {["Our Work", "About Us", "Our Process", "Careers", "Contact"].map(item => (
                 <li key={item}>
-                  <Link href="#" className="text-white/60 hover:text-primary transition-colors">{item}</Link>
+                  <Link href="/portfolio" className="text-white/60 hover:text-primary transition-colors">{item}</Link>
                 </li>
               ))}
             </ul>
@@ -55,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-sm">
-          <p>© 2016 Team Prospira. All rights reserved.</p>
+          <p>© {currentYear} Team Prospira. All rights reserved.</p>
           <div className="flex gap-8">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
