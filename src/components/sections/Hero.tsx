@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import MagneticButton from "@/components/ui/MagneticButton";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { placeholderImages } from "@/app/lib/placeholder-images.json";
 
 export default function Hero() {
@@ -56,12 +57,16 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-            <MagneticButton>
-              Start Your Project <ArrowRight size={18} />
-            </MagneticButton>
-            <MagneticButton variant="outline" className="text-white border-white/20 hover:bg-white/10">
-              Explore Our Work
-            </MagneticButton>
+            <Link href="/services">
+              <MagneticButton>
+                Start Your Project <ArrowRight size={18} />
+              </MagneticButton>
+            </Link>
+            <Link href="/portfolio">
+              <MagneticButton variant="outline" className="text-white border-white/20 hover:bg-white/10">
+                Explore Our Work
+              </MagneticButton>
+            </Link>
           </motion.div>
         </motion.div>
 
