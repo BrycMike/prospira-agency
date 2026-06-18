@@ -29,7 +29,7 @@ export default function AboutPage() {
               We specialize in preserving the identity of digital products while rebuilding them on cleaner, more stable foundations.
             </p>
             <p className="text-lg text-muted-foreground/80 leading-relaxed">
-              Whether it's migrating Minecraft ecosystems like LanternGolem or moving enterprise voice systems from V1 to V2, our mission is to ensure that technical upgrades feel seamless to the user and effortless for the developer.
+              Whether it's migrating Minecraft ecosystems like LanternGolem or moving enterprise voice systems like Wang Fei from V1 to V2, our mission is to ensure that technical upgrades feel seamless to the user and effortless for the developer.
             </p>
           </motion.div>
           <div className="relative">
