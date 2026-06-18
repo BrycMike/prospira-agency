@@ -1,10 +1,11 @@
+
 {
   "placeholderImages": [
     {
-      "id": "hero-abstract",
-      "description": "Abstract 3D digital ecosystem",
-      "imageUrl": "https://picsum.photos/seed/prospira-hero/1200/800",
-      "imageHint": "abstract 3d ecosystem"
+      "id": "hero-main",
+      "description": "Halal Partner mobile app interface showcase with multiple phone mockups",
+      "imageUrl": "https://picsum.photos/seed/halal-partner-ui/1200/1200",
+      "imageHint": "mobile app"
     },
     {
       "id": "portfolio-1",

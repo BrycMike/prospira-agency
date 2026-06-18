@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -5,8 +6,11 @@ import { motion } from "framer-motion";
 import MagneticButton from "@/components/ui/MagneticButton";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { placeholderImages } from "@/app/lib/placeholder-images.json";
 
 export default function Hero() {
+  const heroImageData = placeholderImages.find(img => img.id === "hero-main");
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -79,14 +83,16 @@ export default function Hero() {
              <div className="relative w-full aspect-square bg-gradient-to-tr from-white/10 to-white/5 rounded-3xl border border-white/10 p-8 backdrop-blur-sm overflow-hidden group">
                 <div className="absolute inset-0 bg-primary/20 blur-3xl opacity-20 group-hover:opacity-40 transition-opacity" />
                 <div className="relative z-10 h-full w-full flex items-center justify-center">
-                  <Image 
-                    src="https://picsum.photos/seed/tech-ecosystem/800/800"
-                    alt="Ecosystem illustration"
-                    width={800}
-                    height={800}
-                    className="rounded-xl shadow-2xl rotate-3"
-                    data-ai-hint="tech ecosystem"
-                  />
+                  {heroImageData && (
+                    <Image 
+                      src={heroImageData.imageUrl}
+                      alt={heroImageData.description}
+                      width={800}
+                      height={800}
+                      className="rounded-xl shadow-2xl rotate-3"
+                      data-ai-hint={heroImageData.imageHint}
+                    />
+                  )}
                   {/* Floating elements */}
                   <motion.div 
                     animate={{ y: [-10, 10, -10] }} 
