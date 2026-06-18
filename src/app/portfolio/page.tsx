@@ -73,7 +73,7 @@ export default function PortfolioPage() {
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-6xl md:text-8xl font-black font-headline tracking-tighter mb-8 leading-[0.9]"
+              className="text-5xl md:text-7xl font-black font-headline tracking-tighter mb-8 leading-[0.9]"
             >
               Selected <br /> Works
             </motion.h1>

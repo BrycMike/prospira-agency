@@ -22,7 +22,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
           >
             <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Our Story</span>
-            <h1 className="text-6xl md:text-8xl font-black font-headline tracking-tighter mb-8 leading-[0.9]">
+            <h1 className="text-5xl md:text-7xl font-black font-headline tracking-tighter mb-8 leading-[0.9]">
               Ambitious <br /> Minds, <br /> Premium Tech
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
