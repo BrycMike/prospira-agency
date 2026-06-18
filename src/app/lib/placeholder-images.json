@@ -30,6 +30,12 @@
       "description": "Prospira collaborative workspace",
       "imageUrl": "https://picsum.photos/seed/team/1200/600",
       "imageHint": "agency team"
+    },
+    {
+      "id": "services-header",
+      "description": "Premium digital solutions concept",
+      "imageUrl": "https://picsum.photos/seed/services-concept/1000/800",
+      "imageHint": "digital agency"
     }
   ]
 }

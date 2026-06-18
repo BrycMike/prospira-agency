@@ -1,9 +1,12 @@
+
 "use client";
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, HelpCircle } from "lucide-react";
 import MagneticButton from "@/components/ui/MagneticButton";
+import Image from "next/image";
+import { placeholderImages } from "@/app/lib/placeholder-images.json";
 
 const options = [
   { id: "web", name: "Web Development", basePrice: 5000 },
@@ -22,6 +25,8 @@ const features = [
 export default function ServicesPage() {
   const [selectedType, setSelectedType] = useState(options[0].id);
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
+  
+  const servicesImageData = placeholderImages.find(img => img.id === "services-header");
 
   const toggleFeature = (id: string) => {
     setSelectedFeatures(prev => 
@@ -40,17 +45,36 @@ export default function ServicesPage() {
   return (
     <div className="pt-32 pb-24 bg-background">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl mb-24">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-black font-headline tracking-tighter mb-8 leading-[0.9]"
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
+          <div className="max-w-3xl">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-5xl md:text-7xl font-black font-headline tracking-tighter mb-8 leading-[0.9]"
+            >
+              Digital <br /> Solutions <br /> Built for Scale
+            </motion.h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              From strategic discovery to high-performance development, we offer a comprehensive suite of services designed to accelerate your growth.
+            </p>
+          </div>
+          
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="relative rounded-[2rem] overflow-hidden border border-border shadow-2xl aspect-video lg:aspect-square"
           >
-            Digital <br /> Solutions <br /> Built for Scale
-          </motion.h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            From strategic discovery to high-performance development, we offer a comprehensive suite of services designed to accelerate your growth.
-          </p>
+            {servicesImageData && (
+              <Image 
+                src={servicesImageData.imageUrl}
+                alt={servicesImageData.description}
+                fill
+                className="object-cover"
+                data-ai-hint={servicesImageData.imageHint}
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none" />
+          </motion.div>
         </div>
 
         {/* Pricing Estimator */}
