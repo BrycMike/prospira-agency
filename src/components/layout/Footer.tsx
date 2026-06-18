@@ -21,19 +21,6 @@ export default function Footer() {
             <p className="text-white/60 mb-8 max-w-xs">
               A premium digital agency specializing in high-performance websites, applications, and future-forward digital products.
             </p>
-            <div className="flex gap-4">
-              {socialLinks.map(({ Icon, href }, i) => (
-                <Link 
-                  key={i} 
-                  href={href} 
-                  target={href !== "#" ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white/5 hover:bg-primary hover:text-white transition-all"
-                >
-                  <Icon size={18} />
-                </Link>
-              ))}
-            </div>
           </div>
 
           <div>
