@@ -3,6 +3,13 @@ import Link from "next/link";
 import { Twitter, Linkedin, Github, Instagram, ArrowRight } from "lucide-react";
 
 export default function Footer() {
+  const socialLinks = [
+    { Icon: Twitter, href: "#" },
+    { Icon: Linkedin, href: "#" },
+    { Icon: Github, href: "https://github.com/BrycMike" },
+    { Icon: Instagram, href: "#" }
+  ];
+
   return (
     <footer className="bg-[#233038] text-white py-20 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
@@ -15,8 +22,14 @@ export default function Footer() {
               A premium digital agency specializing in high-performance websites, applications, and future-forward digital products.
             </p>
             <div className="flex gap-4">
-              {[Twitter, Linkedin, Github, Instagram].map((Icon, i) => (
-                <Link key={i} href="#" className="p-2 rounded-full bg-white/5 hover:bg-primary hover:text-white transition-all">
+              {socialLinks.map(({ Icon, href }, i) => (
+                <Link 
+                  key={i} 
+                  href={href} 
+                  target={href !== "#" ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-white/5 hover:bg-primary hover:text-white transition-all"
+                >
                   <Icon size={18} />
                 </Link>
               ))}
