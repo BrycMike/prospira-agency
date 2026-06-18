@@ -41,7 +41,7 @@ export default function Hero() {
           className="text-left"
         >
           <motion.div variants={itemVariants} className="inline-block px-4 py-1.5 rounded-full border border-white/20 bg-white/5 text-white text-xs font-bold mb-6 tracking-widest uppercase">
-            Team Prospira — Modern Agency
+            Team Prospira Modern Agency
           </motion.div>
           
           <motion.h1 
