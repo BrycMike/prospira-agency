@@ -46,7 +46,7 @@ export default function Hero() {
           
           <motion.h1 
             variants={itemVariants}
-            className="text-6xl md:text-8xl font-black text-white font-headline leading-[0.9] tracking-tighter mb-8 bg-gradient-to-b from-white to-[#F4D47C] bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-black text-white font-headline leading-[0.9] tracking-tighter mb-8 bg-gradient-to-b from-white to-[#F4D47C] bg-clip-text text-transparent"
           >
             We Build Digital <br /> Products That <br /> Grow Businesses
           </motion.h1>
