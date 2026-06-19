@@ -4,7 +4,7 @@
     {
       "id": "hero-main",
       "description": "Prospira Premium Product Showcase",
-      "imageUrl": "https://www.image2url.com/r2/default/images/1781837937575-79a03437-17a1-4895-9278-0878e7f627e8.png",
+      "imageUrl": "https://picsum.photos/seed/hero/1200/800",
       "imageHint": "premium digital product"
     },
     {
@@ -36,6 +36,12 @@
       "description": "Premium digital solutions concept",
       "imageUrl": "https://picsum.photos/seed/services-concept/1000/800",
       "imageHint": "digital agency"
+    },
+    {
+      "id": "about-philosophy",
+      "description": "System architecture and digital evolution",
+      "imageUrl": "https://www.image2url.com/r2/default/images/1781837937575-79a03437-17a1-4895-9278-0878e7f627e8.png",
+      "imageHint": "system architecture"
     }
   ]
 }

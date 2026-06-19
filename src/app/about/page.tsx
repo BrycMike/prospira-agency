@@ -1,9 +1,11 @@
+
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 import { Target, Rocket, ShieldCheck, Zap } from "lucide-react";
 import Image from "next/image";
+import { placeholderImages } from "@/app/lib/placeholder-images.json";
 
 const values = [
   { icon: <Target className="text-primary" />, title: "Preservation", desc: "We focus on keeping the original 'feel' and soul of a product intact during major transitions." },
@@ -13,6 +15,8 @@ const values = [
 ];
 
 export default function AboutPage() {
+  const philosophyImage = placeholderImages.find(img => img.id === "about-philosophy");
+
   return (
     <div className="pt-32 pb-24 bg-background">
       <div className="max-w-7xl mx-auto px-6">
@@ -40,13 +44,15 @@ export default function AboutPage() {
               transition={{ duration: 1 }}
               className="relative rounded-[3rem] overflow-hidden border border-border shadow-2xl aspect-[4/5]"
             >
-              <Image 
-                src="https://picsum.photos/seed/system-architecture/800/1000" 
-                alt="System Architecture" 
-                fill
-                className="object-cover"
-                data-ai-hint="system architecture"
-              />
+              {philosophyImage && (
+                <Image 
+                  src={philosophyImage.imageUrl} 
+                  alt={philosophyImage.description} 
+                  fill
+                  className="object-cover"
+                  data-ai-hint={philosophyImage.imageHint}
+                />
+              )}
             </motion.div>
           </div>
         </div>
