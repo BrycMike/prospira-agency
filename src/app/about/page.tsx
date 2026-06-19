@@ -4,6 +4,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Target, Rocket, ShieldCheck, Zap } from "lucide-react";
+import Image from "next/image";
+import { placeholderImages } from "@/app/lib/placeholder-images.json";
 
 const values = [
   { icon: <Target className="text-primary" />, title: "Preservation", desc: "We focus on keeping the original 'feel' and soul of a product intact during major transitions." },
@@ -13,13 +15,15 @@ const values = [
 ];
 
 export default function AboutPage() {
+  const aboutPhilosophyImage = placeholderImages.find(img => img.id === "about-philosophy");
+
   return (
     <div className="pt-32 pb-24 bg-background">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
           >
             <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Our Philosophy</span>
             <h1 className="text-5xl md:text-7xl font-black font-headline tracking-tighter mb-8 leading-[0.9]">
@@ -31,6 +35,23 @@ export default function AboutPage() {
             <p className="text-lg text-muted-foreground/80 leading-relaxed">
               Whether it's migrating Minecraft ecosystems like LanternGolem or moving enterprise voice systems like Wang Fei from V1 to V2, our mission is to ensure that technical upgrades feel seamless to the user and effortless for the developer.
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="relative rounded-[2rem] overflow-hidden border border-border shadow-2xl aspect-square"
+          >
+            {aboutPhilosophyImage && (
+              <Image 
+                src={aboutPhilosophyImage.imageUrl}
+                alt={aboutPhilosophyImage.description}
+                fill
+                className="object-cover"
+                data-ai-hint={aboutPhilosophyImage.imageHint}
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent pointer-events-none" />
           </motion.div>
         </div>
 
